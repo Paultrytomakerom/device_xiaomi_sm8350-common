@@ -146,6 +146,8 @@ ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
 camera.disable_zsl_mode=true
+persist.vendor.camera.logLevel=0
+persist.vendor.camera.sensor=0
 ro.hardware.camera=xiaomi
 
 # Chipset
@@ -166,9 +168,6 @@ persist.vendor.dpmhalservice.enable=1
 
 # Enable DeviceAsWebcam support
 ro.usb.uvc.enabled=true
-
-# FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
@@ -223,12 +222,13 @@ vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 vendor.gralloc.disable_ubwc=0
 
-# LMKD
-ro.lmk.kill_heaviest_task=true
-ro.lmk.kill_timeout_ms=100
+# LMK
+ro.config.low_ram=false
 
 # Logs
 persist.log.tag.OpenGLRenderer=S
+persist.log.tag.QC2Buf=W
+persist.log.tag.QC2V4l2Codec=E
 
 # Media
 debug.stagefright.c2inputsurface=-1
